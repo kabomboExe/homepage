@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcoming-paragraph {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 80px 20px;
+    letter-spacing: 3px;
+}
+
+.first-paragraph {
+    font-size: 80px;
+    text-shadow:
+        3px 2px rgb(47, 255, 57),
+        -3px -2px rgb(255, 12, 12),
+        4px -3px rgb(60, 60, 255);
+
+    /*background: rgb(2, 0, 36);
+    background: linear-gradient(169deg, rgb(78, 133, 250) 0%,
+            rgb(37, 37, 204) 35%, rgb(168, 25, 12) 100%);
+    /* Mask the color to the text, and remove the rest  */
+    /*-webkit-background-clip: text;
+    /* Make the text fill color value transparent so the masked background color comes through */
+    /*-webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 30px rgba(255, 255, 255, 0.247));*/
+}
+
+.sec-paragraph {
+    color: rgb(236, 236, 236);
+    font-size: 30px;
+    text-shadow: 2px 2px 30px rgba(255, 255, 255, 0.247);
+}
+
+.up {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    line-height: 0;
+    width: 100%;
+}
+
+.up svg {
+    display: block;
+    width: calc(180% + 1.3px);
+    height: 200px;
+
+}
+
+.up .shape-fill {
+    fill: rgb(236, 236, 236);
+
+}
+
+.down {
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+}
+
+.down svg {
+    display: block;
+    width: calc(180% + 1.3px);
+    height: 400px;
+}
+
+.down .shape-fill {
+    fill: rgb(236, 236, 236);
+}
+

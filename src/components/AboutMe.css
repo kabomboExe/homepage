@@ -1,0 +1,99 @@
+.about-me-paragraph {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px 0px;
+}
+
+.picture-me {
+    width: 200px;
+    border-radius: 50%;
+    
+    transition: all 3s;
+    margin: 100px 0px;
+}
+
+.picture-me:hover {
+    box-shadow:
+        inset 0 0 2px #fff,
+        inset -2px 0 15px #0ff,
+        inset 2px 0 8px rgb(255, 94, 0),
+        inset -2px 0 60px #0ff,
+        inset 2px 0 10px rgb(255, 102, 0),
+
+        0 0 1px #fff,
+        1px 0 40px #0ff,
+        -1px 0 80px rgb(255, 115, 0);
+}
+
+.accordion{
+    width: 1200px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+
+.first-p-summary{
+    font-weight: bold;
+    font-size: x-large;
+    color: rgb(253, 126, 126);
+
+}
+
+.sec-p-summary{
+    color: rgb(236, 236, 236);
+    font-size: large;
+}
+
+.details-accordion{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.text-accordion{
+    color: rgb(136, 136, 136);
+}
+
+.skills-accordion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-card{
+    width: 200px;
+    border: 2px solid black;
+    padding: 0px 10px;
+    background-color: black;
+    color: rgb(253, 126, 126);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+    .accordion{
+        width: 600px;
+    }    
+    .skills-accordion{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .accordion{
+        width: 300px;
+    }
+    .first-p-summary{
+        font-size: medium;
+    }
+    .sec-p-summary{
+        font-size: small;
+    }
+
+
+}

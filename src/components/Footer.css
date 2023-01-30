@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(153deg, rgb(0, 0, 0) 0%,
+            rgb(12, 12, 12) 5%, rgb(27, 17, 21) 49%, 
+            rgb(8, 8, 8) 92%,
+            rgb(8, 8, 8) 100%);    
+            color: rgba(240, 248, 255,1);
+    padding: 50px;
+}
+
+.name-tag {
+    margin-left: 8px;
+    text-decoration: none;
+    color: rgba(240, 248, 255, 1);
+}
+
+.name-tag:hover {
+    color: rgba(255, 240, 240, 0.6);
+}
