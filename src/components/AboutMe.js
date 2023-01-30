@@ -1,6 +1,6 @@
 import React from "react";
 import me from "../images/me.jpg";
-import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, ListItemButton } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Person2Icon from '@mui/icons-material/Person2';
 import SchoolIcon from '@mui/icons-material/School';
@@ -8,6 +8,10 @@ import CodeIcon from '@mui/icons-material/Code';
 import "./AboutMe.css";
 import { languages, frameworks, tools, softskills } from "../data/skills";
 import { personal, educational, skills } from "../data/texts-about-me";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
 
 const AboutMe = () => {
     return (
@@ -77,13 +81,78 @@ const AboutMe = () => {
                             </p>
                             <div className='skills-accordion'>
                                 <div className='skills-card'>
-                                    <h1>test</h1>
+                                    <h1>Languages</h1>
+                                    <h4>Coding</h4>
+                                    <List>
+                                        {languages.map((item, index) => (
+                                            <>
+                                                {index !== 0 && <hr></hr>}
+                                                <a href={item.url}>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <CodeIcon></CodeIcon>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary={item.name}></ListItemText>
+                                                    </ListItem>
+                                                </a>
+                                            </>
+                                        ))}
+                                    </List>
                                 </div>
                                 <div className='skills-card'>
+                                    <h1>Frameworks</h1>
+                                    <h4>Web & Mobile</h4>
+                                    <List>
+                                        {frameworks.map((item, index) => (
+                                            <>
+                                                {index !== 0 && <hr></hr>}
+                                                <a href={item.url}>
+                                                    <ListItemButton>
+                                                        <ListItemAvatar>
+                                                            <CodeIcon></CodeIcon>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary={item.name}></ListItemText>
+                                                    </ListItemButton>
+                                                </a>
+                                            </>
+                                        ))}
+                                    </List>
                                 </div>
                                 <div className='skills-card'>
+                                    <h1>Tools</h1>
+                                    <h4>Software</h4>
+                                    <List>
+                                        {tools.map((item, index) => (
+                                            <>
+                                                {index !== 0 && <hr></hr>}
+                                                <a href={item.url}>
+                                                    <ListItem>
+                                                        <ListItemAvatar>
+                                                            <CodeIcon></CodeIcon>
+                                                        </ListItemAvatar>
+                                                        <ListItemText primary={item.name}></ListItemText>
+                                                    </ListItem>
+                                                </a>
+                                            </>
+                                        ))}
+                                    </List>
                                 </div>
                                 <div className='skills-card'>
+                                    <h1>Softskills</h1>
+                                    <h4>Social</h4>
+                                    <List>
+                                        {softskills.map((item, index) => (
+                                            <>
+                                                {index !== 0 && <hr></hr>}
+                                                <ListItem>
+                                                    <ListItemAvatar>
+                                                        <CodeIcon></CodeIcon>
+                                                    </ListItemAvatar>
+                                                    <ListItemText primary={item.name}></ListItemText>
+                                                </ListItem>
+                                            </>
+                                        ))}
+                                    </List>
                                 </div>
 
                             </div>
