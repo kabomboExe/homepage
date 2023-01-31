@@ -3,7 +3,12 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    animation: welcoming ease-in-out 1s;
+    position: relative;
+    top: 0px;
 }
+
+
 
 .welcoming-paragraph {
     display: flex;
@@ -11,8 +16,18 @@
     flex-direction: column;
     padding: 80px 20px;
     letter-spacing: 3px;
+
+
 }
 
+@keyframes welcoming {
+    0%{
+        top: -40px;
+    }
+    100%{
+        top: 0px;
+    }
+}
 .first-paragraph {
     font-size: 80px;
     text-shadow:
@@ -36,43 +51,5 @@
     text-shadow: 2px 2px 30px rgba(255, 255, 255, 0.247);
 }
 
-.up {
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    line-height: 0;
-    width: 100%;
-}
 
-.up svg {
-    display: block;
-    width: calc(180% + 1.3px);
-    height: 200px;
-
-}
-
-.up .shape-fill {
-    fill: rgb(236, 236, 236);
-
-}
-
-.down {
-    width: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-
-}
-
-.down svg {
-    display: block;
-    width: calc(180% + 1.3px);
-    height: 400px;
-}
-
-.down .shape-fill {
-    fill: rgb(236, 236, 236);
-}
 
