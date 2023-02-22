@@ -5,14 +5,16 @@ import Home from "./pages/Home";
 import BA from "./pages/BA";
 import Portfolio from "./pages/Portfolio";
 import React from 'react';
+import ErrorPage from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: '/', element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       { path: '/', element: <Home></Home> },
       { path: 'bachelor-thesis', element: <BA></BA> },
-      { path: 'portfolio', element: <Portfolio></Portfolio>}
+      { path: 'portfolio', element: <Portfolio></Portfolio>,}
     ]
 
   },

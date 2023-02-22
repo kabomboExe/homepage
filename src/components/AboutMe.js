@@ -12,13 +12,14 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Button from "./Button";
 
 const AboutMe = () => {
     return (
         <div className='about-me-paragraph'>
             <img className='picture-me' src={me} alt=''></img>
             <div className='accordion'>
-                <Accordion sx={{ margin: "10px 0px" }}>
+                <Accordion sx={{ margin: "10px 0px", backgroundColor:"black" }}>
                     <AccordionSummary sx={{ backgroundColor: "black", border: "1px solid #ececec", borderRadius: "5px" }}
                         expandIcon={<ExpandMoreIcon sx={{ color: "#ececec" }} />}
                         aria-controls="panel1a-content"
@@ -38,7 +39,7 @@ const AboutMe = () => {
                     </AccordionDetails>
                 </Accordion></div>
             <div className='accordion'>
-                <Accordion sx={{ margin: "10px 0px" }}>
+                <Accordion sx={{ margin: "10px 0px", backgroundColor:"black"  }}>
                     <AccordionSummary sx={{ backgroundColor: "black", border: "1px solid #ececec", borderRadius: "5px" }}
                         expandIcon={<ExpandMoreIcon sx={{ color: "#ececec" }} />}
                         aria-controls="panel1a-content"
@@ -55,13 +56,13 @@ const AboutMe = () => {
                     <AccordionDetails>
                         <div className='details-accordion'>
                             <p className='text-accordion'>
-                                {educational.map(item => <>{item}<br></br><br></br></>)}
+                                {educational.map((item, index) => index !== 2 ? <>{item}<br></br><br></br></> : <>{item}<Button buttonText="Bachelor thesis" path="/bachelor-thesis"></Button></>)}
                             </p>
                         </div>
                     </AccordionDetails>
                 </Accordion></div>
             <div className='accordion'>
-                <Accordion sx={{ margin: "10px 0px" }}>
+                <Accordion sx={{ margin: "10px 0px", backgroundColor:"black"  }}>
                     <AccordionSummary sx={{ backgroundColor: "black", border: "1px solid #ececec", borderRadius: "5px" }}
                         expandIcon={<ExpandMoreIcon sx={{ color: "#ececec" }} />}
                         aria-controls="panel1a-content"
@@ -77,7 +78,7 @@ const AboutMe = () => {
                     <AccordionDetails>
                         <div className='details-accordion'>
                             <p className='text-accordion'>
-                                {skills.map(item => <>{item}<br></br><br></br></>)}
+                                {skills.map((item, index) => index !== 1 ? <>{item}<br></br><br></br></> : <>{item}<Button buttonText="Portfolio" path="/portfolio"></Button></> )}
                             </p>
                             <div className='skills-accordion'>
                                 <div className='skills-card'>

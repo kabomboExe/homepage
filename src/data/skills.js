@@ -5,22 +5,6 @@ export const languages = [
         code: "fab fa-js-square"
     },
     {
-        name: "Python",
-        url: "https://www.python.org",
-        code: "fab fa-python"
-    },
-    {
-        name: "Typescript",
-        url: "https://www.typescriptlang.org",
-        code: "fas fa-square"
-    },
-    {
-        name: "Dart",
-        url: "https://dart.dev",
-        code: "fas fa-cube"
-    },
-
-    {
         name: "HTML",
         url: "https://html.spec.whatwg.org",
         code: "fab fa-html5"
@@ -30,6 +14,22 @@ export const languages = [
         url: "https://www.w3.org/Style/CSS/",
         code: "fab fa-css3"
     },
+    {
+        name: "Typescript",
+        url: "https://www.typescriptlang.org",
+        code: "fas fa-square"
+    },
+    {
+        name: "Python",
+        url: "https://www.python.org",
+        code: "fab fa-python"
+    },
+    {
+        name: "Dart",
+        url: "https://dart.dev",
+        code: "fas fa-cube"
+    },
+
     {
         name: "Java",
         url: "https://www.java.com/de/",

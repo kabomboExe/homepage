@@ -58,7 +58,7 @@
 }
 
 .text-accordion{
-    color: rgb(136, 136, 136);
+    color: rgb(212, 212, 212);
 }
 
 .skills-accordion{
@@ -68,7 +68,7 @@
 
 .skills-card{
     width: 200px;
-    border: 2px solid black;
+    border: 2px solid rgb(212, 212, 212);
     padding: 0px 10px;
     margin: 20px 0px;
     background-color: black;

@@ -6,11 +6,12 @@ import Header from '../components/Header';
 
 function Root() {
     return (
-        <div>
+        <>
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
-        </div>);
+        </>
+    );
 }
 
 export default Root;
