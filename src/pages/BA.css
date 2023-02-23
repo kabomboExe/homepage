@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.carousel{
+   width: 200px;
+    
+}
+.carousel-item {
+    width: 200px;
+}
