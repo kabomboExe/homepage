@@ -4,11 +4,36 @@
   padding: 100px 0px;
 }
 
+.pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .swiper {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.input-label, .pages{
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(253, 126, 126);
+}
+.input-label, .pages{
+    margin: 10px 5px;
+    
+}
+
+.input{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid rgb(253, 126, 126);
+    border-radius: 10px;
 }
 
 .left-button,
@@ -27,7 +52,11 @@
 }
 
 .swiperslide {
-  max-width: 80%;
+  max-width: 60%;
+}
+
+.small-screen{
+    display: none;
 }
 
 @media screen and (max-width: 1300px) {
@@ -35,6 +64,13 @@
     .left-button, .right-button{
         display: none;
     }
+    .swiperslide{
+        max-width: 80%;
+    }
+    .small-screen{
+        display: block;
+    }
+
 
 }
 @media screen and (max-width: 768px) {

@@ -19,7 +19,7 @@ const Header = () => {
 
     return <header className='header'>
         <div className='menu-left'>
-            <div className='menu-item logo'></div>
+            <Link className="menu-item" to="/"><div className='logo'></div></Link>
         </div>
         <div className='menu-right'>
             <button className="menu-item-dropdown" onClick={dropdownMenuHandler}>
