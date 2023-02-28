@@ -34,7 +34,7 @@ const AboutMe = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <div className='details-accordion'>
-                            <p className='text-accordion'>{personal.map((item, index) => index === 2 ? <>{item}<br></br></> : <>{item}<br></br><br></br></>)}</p>
+                            <div className='text-accordion'>{personal.map((item, index) => index === 2 ? <p key={index}>{item}<br></br></p> : <p key={index}>{item}<br></br><br></br></p>)}</div>
                         </div>
                     </AccordionDetails>
                 </Accordion></div>
@@ -55,9 +55,9 @@ const AboutMe = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <div className='details-accordion'>
-                            <p className='text-accordion'>
-                                {educational.map((item, index) => index !== 2 ? <>{item}<br></br><br></br></> : <>{item}<Button buttonText="Bachelor thesis" path="/bachelor-thesis"></Button></>)}
-                            </p>
+                            <div className='text-accordion'>
+                                {educational.map((item, index) => index !== 2 ? <p key={index}>{item}<br></br><br></br></p> : <p key={index}>{item}<Button buttonText="Bachelor thesis" path="/bachelor-thesis"></Button></p>)}
+                            </div>
                         </div>
                     </AccordionDetails>
                 </Accordion></div>
@@ -77,16 +77,16 @@ const AboutMe = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <div className='details-accordion'>
-                            <p className='text-accordion'>
-                                {skills.map((item, index) => index !== 1 ? <>{item}<br></br><br></br></> : <>{item}<Button buttonText="Portfolio" path="/portfolio"></Button></> )}
-                            </p>
+                            <div className='text-accordion'>
+                                {skills.map((item, index) => index !== 1 ? <p key={index}>{item}<br></br><br></br></p> : <p key={index}>{item}<Button buttonText="Portfolio" path="/portfolio"></Button></p> )}
+                            </div>
                             <div className='skills-accordion'>
                                 <div className='skills-card'>
                                     <h1>Languages</h1>
                                     <h4>Coding</h4>
                                     <List>
                                         {languages.map((item, index) => (
-                                            <>
+                                            <div key={index}>
                                                 {index !== 0 && <hr></hr>}
                                                 <a href={item.url}>
                                                     <ListItem>
@@ -96,7 +96,7 @@ const AboutMe = () => {
                                                         <ListItemText primary={item.name}></ListItemText>
                                                     </ListItem>
                                                 </a>
-                                            </>
+                                            </div>
                                         ))}
                                     </List>
                                 </div>
@@ -105,7 +105,7 @@ const AboutMe = () => {
                                     <h4>Web & Mobile</h4>
                                     <List>
                                         {frameworks.map((item, index) => (
-                                            <>
+                                            <div key={index}>
                                                 {index !== 0 && <hr></hr>}
                                                 <a href={item.url}>
                                                     <ListItemButton>
@@ -115,7 +115,7 @@ const AboutMe = () => {
                                                         <ListItemText primary={item.name}></ListItemText>
                                                     </ListItemButton>
                                                 </a>
-                                            </>
+                                            </ div>
                                         ))}
                                     </List>
                                 </div>
@@ -124,7 +124,7 @@ const AboutMe = () => {
                                     <h4>Software</h4>
                                     <List>
                                         {tools.map((item, index) => (
-                                            <>
+                                            <div key={index}>
                                                 {index !== 0 && <hr></hr>}
                                                 <a href={item.url}>
                                                     <ListItem>
@@ -134,7 +134,7 @@ const AboutMe = () => {
                                                         <ListItemText primary={item.name}></ListItemText>
                                                     </ListItem>
                                                 </a>
-                                            </>
+                                            </div>
                                         ))}
                                     </List>
                                 </div>
@@ -143,7 +143,7 @@ const AboutMe = () => {
                                     <h4>Social</h4>
                                     <List>
                                         {softskills.map((item, index) => (
-                                            <>
+                                            <div key={index}>
                                                 {index !== 0 && <hr></hr>}
                                                 <ListItem>
                                                     <ListItemAvatar>
@@ -151,7 +151,7 @@ const AboutMe = () => {
                                                     </ListItemAvatar>
                                                     <ListItemText primary={item.name}></ListItemText>
                                                 </ListItem>
-                                            </>
+                                            </div>
                                         ))}
                                     </List>
                                 </div>

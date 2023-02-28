@@ -54,6 +54,20 @@
 
 .swiperslide {
   max-width: 60%;
+  opacity: 1.0;
+}
+
+.slideAnimation{
+    animation: slideAnimation 0.5s ease-in-out;
+}
+
+@keyframes slideAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .small-screen{
@@ -61,6 +75,9 @@
 }
 
 @media screen and (max-width: 1300px) {
+    .container{
+        padding: 50px 0px;
+    }
 
     .left-button, .right-button{
         display: none;

@@ -4,12 +4,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import numberOfBAImg from "../data/ba-pic-list";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useRef } from "react";
 
 const BA = () => {
     const list = numberOfBAImg();
     const [baPic, setbaPic] = useState("");
     const [touchStart, setTouchStart] = useState(null);
     const [touchEnd, setTouchEnd] = useState(null);
+    const [swiperCSS, setSwiperCSS] = useState(false);
+    const inputRef = useRef();
 
     // the required distance between touchStart and touchEnd to be detected as a swipe
     const minSwipeDistance = 50;
@@ -39,27 +42,41 @@ const BA = () => {
     }, []);
 
     const handleChangePageNumber = (event) => {
+
         let num = event.target.value;
         if (num > 0 && num <= list.length) {
             setbaPic(list[num - 1]);
         } else if (num === "") {
             setbaPic(list[0]);
         }
+        animateSlider();
     };
 
     const handlePrevClick = () => {
         let currentPageNumber = list.indexOf(baPic);
         if (currentPageNumber > 0) {
+            animateSlider();
             setbaPic(list[currentPageNumber - 1]);
+            inputRef.current.value = '';
         }
     };
 
     const handleForwardClick = () => {
         let currentPageNumber = list.indexOf(baPic);
         if (currentPageNumber >= 0 && currentPageNumber < list.length - 1) {
+            animateSlider();
             setbaPic(list[currentPageNumber + 1]);
+            inputRef.current.value = '';
+
         }
     };
+
+    const animateSlider = () => {
+        setSwiperCSS(true);
+        setTimeout(() => {
+            setSwiperCSS(false);
+        }, 500);
+    }
 
     return (
         <div className="container">
@@ -82,6 +99,7 @@ const BA = () => {
                 onChange={handleChangePageNumber}
                 placeholder="Enter a number..."
                 type="search"
+                ref={inputRef}
             ></input>
             <div className="swiper">
                 <div className="left-button" onClick={handlePrevClick}>
@@ -91,7 +109,7 @@ const BA = () => {
                     onTouchStart={onTouchStart}
                     onTouchMove={onTouchMove}
                     onTouchEnd={onTouchEnd}
-                    className="swiperslide"
+                    className={swiperCSS ? "swiperslide slideAnimation" : "swiperslide"}
                     src={baPic}
                     alt={baPic}
                 ></img>
