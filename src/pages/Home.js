@@ -8,8 +8,8 @@ const Home = () => {
     return <div className='container'>
         <div className='welcoming-paragraph'>
             <h1 className='first-paragraph'>Hi there, I'm Kai.</h1>
-            <h2 className='sec-paragraph'>I am studying Digital Media at the University of Bremen.
-                <br></br>My field of study is Multimedia Engineering.</h2>
+            <h2 className='sec-paragraph'>I studied Digital Media at the University of Bremen.
+                <br></br>My field of study was Multimedia Engineering.</h2>
         </div>
         <Wave></Wave>
         <AboutMe></AboutMe>

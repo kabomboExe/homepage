@@ -26,9 +26,9 @@ const Header = () => {
                 <MenuIcon sx={{fontSize:40}}/>
             </button>
             <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-                <MenuItem> <Link className="menu-item" to="/">Home</Link></MenuItem>
-                <MenuItem><Link className="menu-item" to="/portfolio">Portfolio</Link></MenuItem>
-                <MenuItem><Link className="menu-item" to="/bachelor-thesis">Bachelor thesis</Link></MenuItem>
+                <MenuItem> <Link className="menu-item" to="/" onClick={handleClose}>Home</Link></MenuItem>
+                <MenuItem><Link className="menu-item" to="/portfolio" onClick={handleClose}>Portfolio</Link></MenuItem>
+                <MenuItem><Link className="menu-item" to="/bachelor-thesis" onClick={handleClose}>Bachelor thesis</Link></MenuItem>
 
             </Menu>
             <Link className='menu-item' to="/">Home</Link>

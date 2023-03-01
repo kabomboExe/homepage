@@ -55,8 +55,8 @@ const BA = () => {
     const handlePrevClick = () => {
         let currentPageNumber = list.indexOf(baPic);
         if (currentPageNumber > 0) {
-            animateSlider();
             setbaPic(list[currentPageNumber - 1]);
+            animateSlider();
             inputRef.current.value = '';
         }
     };
@@ -64,8 +64,8 @@ const BA = () => {
     const handleForwardClick = () => {
         let currentPageNumber = list.indexOf(baPic);
         if (currentPageNumber >= 0 && currentPageNumber < list.length - 1) {
-            animateSlider();
             setbaPic(list[currentPageNumber + 1]);
+            animateSlider();
             inputRef.current.value = '';
 
         }
