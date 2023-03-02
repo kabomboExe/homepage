@@ -11,7 +11,7 @@ const Home = () => {
             <h2 className='sec-paragraph'>I studied Digital Media at the University of Bremen.
                 <br></br>My field of study was Multimedia Engineering.</h2>
         </div>
-        <Wave></Wave>
+        <Wave waves="both"></Wave>
         <AboutMe></AboutMe>
     </div>;
 

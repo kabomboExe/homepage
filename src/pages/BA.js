@@ -79,7 +79,7 @@ const BA = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container ba">
             <div className="pagination">
                 <div className="left-button small-screen" onClick={handlePrevClick}>
                     <ArrowBackIosIcon sx={{ fontSize: 50 }}></ArrowBackIosIcon>

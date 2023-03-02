@@ -7,7 +7,7 @@ const ErrorPage = () => {
     return (
         <>
             <Header></Header>
-            <div className="container">
+            <div className="container error">
                 <div className="pulse"></div>
                 <p className="error-text">Ooops...this page does not exist!</p>
             </div>
