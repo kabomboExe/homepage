@@ -1,7 +1,5 @@
 import React from "react";
 import "./Portfolio.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import WebAssetIcon from "@mui/icons-material/WebAsset";
 import PortfolioInfoCard from "../components/PortfolioInfoCard";
 import { netflixCloneText } from "../data/portfolio-texts";
 
