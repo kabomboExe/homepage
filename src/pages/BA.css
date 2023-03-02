@@ -58,7 +58,7 @@
 }
 
 .slideAnimation{
-    animation: slideAnimation 0.5s ease-in-out;
+    animation: slideAnimation 0.6s ease-in-out;
 }
 
 @keyframes slideAnimation {
