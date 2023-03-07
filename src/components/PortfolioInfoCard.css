@@ -51,8 +51,7 @@
     letter-spacing: 1px;
 
     display: flex;
-    
-    align-items: flex-end;
+    align-items: center;
     margin: 10px 0 10px 20px;
     color: rgb(253, 126, 126);
     transition: color 2s;
@@ -75,6 +74,14 @@
 }
 .info-text:hover .link-text{
     color: rgb(253, 126, 126);
+}
+
+.info-icon{
+    transition: all 1s;
+}
+
+.info-text:hover .info-icon {
+    transform: scale(1.3);
 }
 
 
