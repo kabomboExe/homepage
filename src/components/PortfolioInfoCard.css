@@ -3,7 +3,6 @@
 }
 
 .website-card {
-
     position: relative;
 }
 
@@ -11,7 +10,7 @@
     display: block;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow:hidden;
     padding: 40px;
     width: 700px;
     height: 500px;
@@ -123,6 +122,7 @@
 
     .info-container{
         margin-left: 0;
+        margin-right: 0;
     }
 
     .iframe {
@@ -160,21 +160,31 @@
 }
 
 @media screen and (max-width: 768px) {
+    .info-container{
+        margin: 40px 0;
+    }
+
     .iframe {
+        transform: scale(1);
         width: 350px;
-        height: 200px;
+        height: 350px;
     }
     .infos, .infos-to-left{
         width: 350px;
     }
 
     .overlay:hover+.infos, .infos:hover, .overlay:hover+.infos-to-left, .infos-to-left:hover {
-        height: 200px;
+        height: 350px;
 
     }
 
-    .link-text, .text{
+    .text {
         font-size: small;
-        margin: 15px 15px 5px 15px;
+        margin: 15px 15px;
+    }
+
+    .link-text{
+        font-size: small;
+        margin: 0 5px;
     }
 }
