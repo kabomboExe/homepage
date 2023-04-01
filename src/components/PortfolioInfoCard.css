@@ -1,9 +1,8 @@
 .info-container{
-    margin: 50px 0 100px 50px;
+    margin: 50px 50px 100px 50px;
 }
 
 .website-card {
-
     position: relative;
 }
 
@@ -11,7 +10,7 @@
     display: block;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow:hidden;
     padding: 40px;
     width: 700px;
     height: 500px;
@@ -40,11 +39,27 @@
     transition: .5s ease;
 }
 
+.infos-to-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 580px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(253, 126, 126);
+    transition: .5s ease;
+}
+
 .info-heading {
     letter-spacing: 1px;
     color: rgb(253, 126, 126);
-    
+}
 
+.right{
+    text-align: end;
 }
 
 .info-text {
@@ -60,6 +75,7 @@
 .text {
     color: rgb(212, 212, 212);
     margin: 20px;
+    text-align: start;
 }
 
 .info-text:hover{
@@ -86,7 +102,7 @@
 
 
 @media screen and (min-width: 1301px) {
-    .infos {
+    .infos, .infos-to-left {
         top: 0;
     }
 
@@ -94,12 +110,19 @@
         width: 50%;
 
     }
+    .overlay:hover +.infos-to-left, .infos-to-left:hover {
+        left: -50%;
+        width: 50%;
+
+    }
+
 }
 
 @media screen and (max-width: 1300px) {
 
     .info-container{
         margin-left: 0;
+        margin-right: 0;
     }
 
     .iframe {
@@ -109,19 +132,19 @@
         padding: 0;
     }
 
-    .infos {
+    .infos, .infos-to-left {
         left: 0;
         width: 500px;
         height: 0;
         bottom: 0;
     }
 
-    .overlay:hover+.infos {
+    .overlay:hover+.infos, .overlay:hover+.infos-to-left {
         height: 300px;
 
     }
 
-    .infos:hover {
+    .infos:hover, .infos-to-left:hover {
         height: 300px;
     }
 
@@ -137,21 +160,31 @@
 }
 
 @media screen and (max-width: 768px) {
+    .info-container{
+        margin: 40px 0;
+    }
+
     .iframe {
+        transform: scale(1);
         width: 350px;
-        height: 200px;
+        height: 350px;
     }
-    .infos{
+    .infos, .infos-to-left{
         width: 350px;
     }
 
-    .overlay:hover+.infos, .infos:hover {
-        height: 200px;
+    .overlay:hover+.infos, .infos:hover, .overlay:hover+.infos-to-left, .infos-to-left:hover {
+        height: 350px;
 
     }
 
-    .link-text, .text{
+    .text {
         font-size: small;
-        margin: 15px 15px 5px 15px;
+        margin: 15px 15px;
+    }
+
+    .link-text{
+        font-size: small;
+        margin: 0 5px;
     }
 }
