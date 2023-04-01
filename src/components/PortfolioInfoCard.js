@@ -19,7 +19,7 @@ const PortfolioInfoCard = (props) => {
         <div className="infos">
           <p className="text">{props.infoText}</p>
           <a className="info-text" href={props.website}>
-          <div className="info-icon"><WebAssetIcon></WebAssetIcon></div>
+            <div className="info-icon"><WebAssetIcon></WebAssetIcon></div>
             <p className="link-text">Website Link</p>
           </a>
           <a className="info-text" href={props.github}>
